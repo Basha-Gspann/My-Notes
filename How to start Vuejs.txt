@@ -1,0 +1,34 @@
+
+npm install -g @vue/cli (in cmd Globally)
+
+vue create <app-name> (in particular folder)
+
+npm run serve (to run)
+
+
+//Bootstrap and icons
+
+npm install bootstrap
+
+npm i @fortawesome/fontawesome-free
+
+//Both to geather
+
+npm install bootstrap @fortawesome/fontawesome-free
+
+//Add fontawesome cnd latest version link from this site (https://cdnjs.com/libraries/font-awesome)
+
+//Then add in public/index.html(header)
+
+//Then add this links in main.js
+
+//Font Awesome CSS
+import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+//Bootstrap CSS
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle';
+
+
+
+

@@ -1,0 +1,54 @@
+mkdir rabbani
+
+cd rabbani
+
+npm init -y
+
+npm i express ejs nodemon googleapis
+
+npm i ejs
+
+
+In App.js (Add this below code) Then add folders (views, public, routes)
+
+
+
+
+var createError = require('http-errors');
+var express = require('express');
+const { google } = require("googleapis");
+const app = express();
+var path = require('path');
+// const keys = require('./keys.json')
+const { resolve4 } = require('dns');
+
+
+
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+
+// app.use(require('./routes/submission'))
+
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+// app.get('/' , (req ,res)=>{
+//    res.send('abcdef')
+// })
+
+app.get('/', function (req, res) {
+    res.render('index.ejs');
+  });
+  
+
+app.listen(2022 , (req ,res)=>{
+   console.log('port is running at  2022');
+})
+

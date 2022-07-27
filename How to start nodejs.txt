@@ -1,0 +1,12 @@
+mkdir Rabbu
+
+cd Rabbu (tab)
+
+express --view=ejs
+
+npm install
+
+npm start
+
+
+Result:- node ./bin/www

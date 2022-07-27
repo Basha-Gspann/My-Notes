@@ -1,0 +1,9 @@
+Create a Folder then
+
+1.npx create-react-app app_name
+
+2.cd app_name
+
+3.npm or yarn start
+
+App.js {"rafc" (react arrow function component)}

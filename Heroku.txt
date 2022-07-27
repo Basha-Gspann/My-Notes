@@ -1,0 +1,15 @@
+git add .
+
+git commit -m "ss"
+
+git add .
+
+git status
+
+git branch
+
+git remote
+
+git push -u origin master
+
+git push heroku
