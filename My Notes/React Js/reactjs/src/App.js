@@ -6,12 +6,14 @@ import UseState from './Topics/6.UseState';
 import UseEffect from './Topics/7.UseEffect';
 import OnChange from './Topics/8.OnChange';
 import OnSubmit from './Topics/9.OnSubmit';
+import Map from './Topics/10.Map';
+import Filter from './Topics/11.Filter';
 
 function App() {
   return (
     <div className='app'>
 
-      <ClassComponents />
+      {/* <ClassComponents /> */}
 
       {/* <FunctionComponents /> */}
 
@@ -24,6 +26,10 @@ function App() {
       {/* <OnChange /> */}
 
       {/* <OnSubmit /> */}
+
+      {/* <Map /> */}
+
+      <Filter />
 
 
     </div>
