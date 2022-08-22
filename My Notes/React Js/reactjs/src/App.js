@@ -11,7 +11,7 @@ function App() {
   return (
     <div className='app'>
 
-      {/* <ClassComponents /> */}
+      <ClassComponents />
 
       {/* <FunctionComponents /> */}
 
@@ -23,7 +23,7 @@ function App() {
 
       {/* <OnChange /> */}
 
-      <OnSubmit />
+      {/* <OnSubmit /> */}
 
 
     </div>
