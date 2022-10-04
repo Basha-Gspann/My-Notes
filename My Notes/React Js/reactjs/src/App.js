@@ -8,6 +8,9 @@ import OnChange from './Topics/8.OnChange';
 import OnSubmit from './Topics/9.OnSubmit';
 import Map from './Topics/10.Map';
 import Filter from './Topics/11.Filter';
+import Login from './Topics/13.LoginForm';
+import SignUp from './Topics/14.SignUp';
+import Valid from './Topics/15.FormValid';
 
 function App() {
   return (
@@ -29,7 +32,13 @@ function App() {
 
       {/* <Map /> */}
 
-      <Filter />
+      {/* <Filter /> */}
+
+      {/* <Login /> */}
+
+      {/* <SignUp /> */}
+
+<Valid />
 
 
     </div>

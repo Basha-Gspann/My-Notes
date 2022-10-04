@@ -1,0 +1,284 @@
+{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9\par
+//In Js only objects and arrays are mutable, not primitive values \par
+var arr = [1];\~\~\par
+var arr2= arr.push(3,4);\~\par
+\~console.log(arr);\par
+ Ans:-[1, 3, 4]\par
+\par
+//Strings and Numbers are Immutable.\par
+var str1="hello";\~\par
+var str2="World";\~\par
+var str3=str1+str2;\~\par
+console.log(str3); var a = 2 + 3;\~\~\~\~Ans:- "helloWorld"\par
+console.log(a);   Ans:- 5\par
+\par
+//-----------------------------------------------------------------------\par
+var a = 10;\~\~\~\par
+console.log (10=='10');  Ans:- \par
+var c = 10;\~\~\~\par
+console.log (10==='10');\par
+//-----------------------------------------------------------------------\par
+//undefined\par
+var demo;\par
+console.log(demo);\par
+console.log(typeof demo);\par
+// alert(demo); //shows undefined\par
+// alert(typeof demo); //shows undefined\par
+\par
+//null\par
+var demo1 = null;\par
+console.log(demo1);\par
+console.log(typeof demo1);\par
+// alert(demo1); //shows null// alert(typeof demo1); //shows object\~\~\par
+//-----------------------------------------------------------------------\par
+//NaN (not a number)\par
+var z = NaN;\par
+z!==z; //output: true\par
+\par
+var y = 'strkjh';y!==y;\~\~\~\~//output: false\par
+\par
+var w =10;\par
+w==w; //false;\par
+//-----------------------------------------------------------------------\par
+\par
+//Call By Value:\par
+//When a variable is passed as a parameter to a function, if any changes are\par
+//made to the parameter, the original variable will remain the same and\par
+//this applicable for primitive data type.\par
+\par
+let value1 = 2;\par
+function akram(valueparameter)\{\~\~valueparameter +=2;\par
+console.log("Call By Value: " + valueparameter);\par
+\}\par
+akram(value1);\par
+console.log(value1);\par
+//-----------------------------------------------------------------------\par
+\par
+//Call By Reference://any changes made to the parameter will update the original variable reference\~\~\par
+//and this applicable for non-primitive data type.\par
+\par
+ let myobj = \{ value1:2 \};\par
+function akram(valueparameter)\{\~\~valueparameter.value1 =4;\par
+\}\par
+akram(myobj);\par
+console.log("Call By Reference: " + myobj);\par
+//-----------------------------------------------------------------------\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~// call():\par
+//With the call() method, you can write a method that can be used on different objects.\par
+\par
+var person = \{\~\~firstName:"Akram",\~\~lastName: "Shaik",\~\~fullName: function () \{\~\~\~\~return this.firstName + " " + this.lastName;\~\~\}\par
+\}\par
+alert(person.fullName()); // Will return "Akram Shaik"\par
+//-----------------------------------------------------------------------\par
+//With call(), an object can use a method belonging to another object.\par
+var person = \{\~\~fullName: function() \{\~\~\~\~return this.firstName + " " + this.lastName;\~\~\}\par
+\}\par
+var person1 = \{\~\~firstName:"Abdul",\~\~lastName: "Shaik"a\par
+\}\par
+var person2 = \{\~\~firstName:"Akram",\~\~lastName: "Shaik"\par
+\}\par
+\par
+console.log(person.fullName.call(person1));\~\~// Will return "Abdul Shaik"console.log(person.fullName.call(person2));\~\~// Will return "Akram Shaik"\par
+//-----------------------------------------------------------------------\par
+//The call() Method with Arguments\par
+var person = \{\~\~fullName: function(city, country) \{\~\~\~\~return this.firstName + " " + this.lastName + "," + city + "," + country;\~\~\}\par
+\}\par
+var person1 = \{\~\~firstName:"Akram",\~\~lastName: "Shaik"\par
+\}\par
+console.log(person.fullName.call(person1, "Hyderabad", "India"));\par
+\par
+//-----------------------------------------------------------------------\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~//apply():\par
+//With the apply() method, you can write a method that can be used on different objects.\par
+//The call() method takes arguments separately.\par
+//The apply() method takes arguments as an array. The apply() Method with Arguments\par
+\par
+var person = \{\~\~fullName: function(city, country) \{\~\~\~\~return this.firstName + " " + this.lastName + "," + city + "," + country;\~\~\}\par
+\}\par
+var person4 = \{\~\~firstName:"Akram",\~\~lastName: "Shaik"\par
+\}\par
+console.log(person.fullName.apply(person4, ["Hyderabad", "India"])+ " : Apply");\par
+//-----------------------------------------------------------------------\par
+//Bind()\par
+//The bind() method creates a new function that, when called\par
+//has its this keyword set to the provided value.\par
+\par
+//-----------------------------------------------------------------------\par
+\par
+var car = \{\~\~\~\~registrationNumber: "AP28DR4554",\~\~\~\~brand: "Nissan",\~\~\~\~displayDetails: function()\{\~\~\~\~\~\~\~\~console.log(this.registrationNumber + " " + this.brand);\~\~\~\~\}\par
+\}\par
+car.displayDetails();\par
+// If we want to borrow a method as below,\par
+\par
+var myCarDetails =\~\~car.displayDetails;\par
+myCarDetails();\par
+// this won't work as the "this" will be now assigned to the global context\par
+//which doesn't have neither the registration Number nor the brand property.\par
+\par
+\par
+// The bind() method creates a new function that, when called, has its this keyword\par
+//set to the provided value.\par
+\par
+var myCarDetails = car.displayDetails.bind(car);\par
+myCarDetails(); //\par
+\par
+\par
+//Example of passing arguments with bind():\par
+var car1 = \{\~\~\~\~registrationNumber: "AP28DR4554",\~\~\~\~brand: "Nissan",\par
+\par
+ \~\~\~displayDetails1: function(ownerName)\{\~\~\~\~\~\~\~\~console.log(ownerName + ", this is your car: " + this.registrationNumber + " " + this.brand);\~\~\~\~\}\par
+\}\par
+var myCarDetails1 = car1.displayDetails1.bind(car1, "AkramShaik");\par
+myCarDetails1();\par
+// Akram Shaik, this is your car: AP28DR4554 Nissan\par
+\par
+\par
+\par
+\par
+\par
+//-----------------------------------------------------------------------\par
+//-----------------------------------------------------------------------\par
+//-----------------------------------------------------------------------\par
+//-----------------------------------------------------------------------\par
+//-----------------------------------------------------------------------\par
+\par
+//Hoisting\~\~//Variable Hoisting and Function Hosting \par
+//-----------------------------------------------------------------------\par
+//Hoisting is a JavaScript mechanism where variables and function//declarations are moved to the top of their scope before code execution.\~\~\par
+//variable Hosting: JavaScript only hoists declarations.\~\~\~\~x=10;\~\~\~\~\~\~console.log(x);\~\~\~\~\~\~var x; // console.log(num);\~\~\~// num = 6;\~\~\~\~\par
+\par
+//Function declaration: JavaScript enables to invoke a function before declaring it.\par
+hoisted(); // Output: "This function has been hoisted."\par
+function hoisted () \{\~\~console.log ('This function has been hoisted.');\par
+\};\par
+\par
+//Function expression: Function expressions, are not hoisted.\par
+expression (); //Output: "TypeError: expression is not a function\par
+var expression = function () \{\~\~console.log ('Will this work?');\par
+\};\par
+// expression\par
+//-------------------------------------------------------------------------------------\par
+ like 1\par
+\par
+[Yesterday 23:28] Akram Shaik\par
+var car = \{\~\~\~\~registrationNumber: "AP28DR4554",\~\~\~\~brand: "Nissan",\~\~\~\~displayDetails: function()\{\~\~\~\~\~\~\~\~console.log(this.registrationNumber + " " + this.brand);\~\~\~\~\}\par
+\}\par
+car.displayDetails();\par
+// If we want to borrow a method as below,\par
+\par
+var myCarDetails =\~\~car.displayDetails;\par
+myCarDetails();\par
+// this won't work as the "this" will be now assigned to the global context\par
+//which doesn't have neither the registration Number nor the brand property.\par
+\par
+\par
+// The bind() method creates a new function that, when called, has its this keyword\par
+//set to the provided value.\par
+\par
+var myCarDetails = car.displayDetails.bind(car);\par
+myCarDetails(); //\par
+\par
+\par
+//Example of passing arguments with bind():\par
+var car1 = \{\~\~\~\~registrationNumber: "AP28DR4554",\~\~\~\~brand: "Nissan",\par
+\par
+ \~\~\~displayDetails1: function(ownerName)\{\~\~\~\~\~\~\~\~console.log(ownerName + ", this is your car: " + this.registrationNumber + " " + this.brand);\~\~\~\~\}\par
+\}\par
+var myCarDetails1 = car1.displayDetails1.bind(car1, "AkramShaik");\par
+myCarDetails1();\par
+// Akram Shaik, this is your car: AP28DR4554 Nissan\par
+\par
+//------------------------------------------------------------------------------------------\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~//Closures\par
+//------------------------------------------------------------------------------------------\par
+//A Clouser Can Be Defined as a javascript feature in which the inner function has access\par
+//to the outerfunction variable.\par
+//Every time a clouser is created with the creation of a function.\par
+\par
+var x=10;\~\~\~\~function f()\{\~\~\~\~\~\~\~\~\~\~\~\~\~\~var y=20;\~\~\~\~function g()\{\~\~\~\~\~\~\~\~\~\~\~\~\~\~var z=30;\~\~\~\~\~\~\~\~\~\~\~\~alert(x+y+z);\~\~\~\~\~\~\}\par
+g();\par
+\}\par
+f();\par
+// output:60;\par
+//------------------------------------------------------------------------------------------\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~\~// Callback\par
+//------------------------------------------------------------------------------------------\par
+\par
+//In JavaScript, a callback is a function passed into another function as an argument\par
+//to be executed later.\par
+let numbers = [1, 2, 4, 7, 3, 5, 6];\par
+//To find all the odd numbers in the array, you can use the filter() method.\par
+//Normally, we use anonymous function as callback.\par
+let oddNumbers = numbers.filter(function(number) \{\~\~\~\~return number % 2;\par
+\});\par
+console.log(oddNumbers);\par
+\par
+//---------------------------------------------------------------------------------------------\par
+\par
+let numbers1 = [1, 2, 4, 7, 3, 5, 6];\par
+let oddNumbers1 = numbers1.filter(number => number % 2);\par
+//(OR)\par
+function isOddNumber(number) \{\~\~\~\~return number % 2;\par
+\}//\~\~\~\~\~const oddNumbers = numbers.filter(isOddNumber);\~\~\~\~console.log(oddNumbers1);\par
+//In the above Example isOddNumber is a callback function.\par
+//When you pass a callback function into another function,\par
+//you just pass the reference of the function i.e.,\par
+//the function name without the parentheses ().\par
+\par
+\par
+\par
+\par
+\par
+//------------------------------------------------------------------------------------------\par
+var car = \{\par
+    registrationNumber: "GA12345",\par
+    brand: "Toyota",\par
+\par
+\par
+\par
+   displayDetails: function(ownerName)\{\par
+        console.log(ownerName + ", this is your car: " + this.registrationNumber + " " + this.brand);\par
+    \}\par
+\}\par
+var myCarDetails = car.displayDetails.bind(car, "Akram Shaik");\par
+myCarDetails();\par
+\par
+//Object Literals\par
+var person = \{\par
+               firstName:"Akram",\par
+              lastName:"Shaik",\par
+            age:50,\par
+          eyeColor:"blue"\};\par
+\par
+\par
+\par
+//with new keyword\par
+var person1 = new Object();\par
+person.firstName = "John";\par
+person.lastName = "Doe";\par
+person.age = 50;\par
+person.eyeColor = "blue";\par
+\par
+\par
+\par
+\par
+\par
+\par
+let a = [1,2];\par
+console.log(typeof(a));\par
+\par
+\par
+\par
+let b = new Object();\par
+console.log(typeof(b));\par
+\par
+\par
+\par
+c=5;\par
+console.log(c);\par
+let c;\par
+\par
+\par
+\par
+\par
+\fs96\par
+}
+ 
