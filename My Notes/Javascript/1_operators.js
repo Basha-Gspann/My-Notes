@@ -1,7 +1,7 @@
 // 1. Arthamatic Opertors
 
-// var a = 3;
-// var b = 5;
+var a = 3;
+var b = 5;
 
 // document.write("value", a+b);
 // document.write("<br>");
@@ -9,10 +9,14 @@
 // document.write("<br>");
 // document.write("value", a*b);
 // document.write("<br>");
+
 // This gives Division
+
 // document.write("value", a/b);
 // document.write("<br>");
-// This gives Modules/
+
+// This gives Modules
+
 // document.write("value", a%b);
 // document.write("<br>");
 

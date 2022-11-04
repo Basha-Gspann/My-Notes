@@ -17,16 +17,16 @@
 // Start and stop function
 
 
-var id = 0;
-var message = () => alert("Welcome to");
+// var id = 0;
+// var message = () => alert("Welcome to");
 
-function start(){
-  id = setTimeout(message,3000);
-}
+// function start(){
+//   id = setTimeout(message,3000);
+// }
 
-function stop(){
-    clearTimeout(id);
-  }
+// function stop(){
+//     clearTimeout(id);
+//   }
 
 
 
