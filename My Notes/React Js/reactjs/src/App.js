@@ -24,7 +24,7 @@ function App() {
 
       {/* <UseState /> */}
 
-      {/* <UseEffect /> */}
+      <UseEffect />
 
       {/* <OnChange /> */}
 
@@ -38,7 +38,7 @@ function App() {
 
       {/* <SignUp /> */}
 
-<Valid />
+{/* <Valid /> */}
 
 
     </div>

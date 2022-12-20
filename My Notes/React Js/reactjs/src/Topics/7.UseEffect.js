@@ -16,6 +16,13 @@ const UseEffect = () => {
   const [count2,setCount2] = useState(0);
   useEffect(()=> console.log(count2),[count2])
 
+
+  const [count3, setCount3] = useState(0);
+
+  useEffect(() => {
+    document.title = `You clicked ${count3} times`;
+  });
+
   return (
     <>
 
@@ -38,6 +45,13 @@ const UseEffect = () => {
     <div>
       <h1>Clicked {count2} </h1>
       <button onClick={()=> setCount2(count2 + 1)}>Click Me</button>
+    </div>
+
+    <div>
+    <p>You clicked {count3} times</p>
+      <button onClick={() => setCount3(count3 + 1)}>
+        Click me
+      </button>
     </div>
 
     </>
