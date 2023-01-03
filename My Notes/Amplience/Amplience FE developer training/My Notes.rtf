@@ -1,0 +1,123 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red255\green255\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs44\lang9 Overview of Amplience\par
+
+\pard\sa200\sl276\slmult1\fs28\par
+What is Amplience?\b0\par
+Amplience is an API-first, headless content management platform for enterprise retail, enabling teams to do more, better, faster.\par
+\b What are editions and event in Amplience?\b0\par
+\b Event\b0 :- Events are created from the scheduling view.\line Events have start and end date that cover all the activity for the entire campaign.\line The event can also contain an attachment, which is specified as a URL.\line Within events we will create one or more editions, which represent a drop of content.\par
+\b Editions\b0 :- Editions are what combine the "Drops" of content with the date it is sheduled to go live.\par
+\b Slots\b0 :- Slots represent areas of your website,mobile site or app.\line They are used to determined where your content should bedelivered to.\par
+\par
+\b Can you tell me about SFCC integration with Amplience?\par
+\b0 Amplience is used for authoring, scheduling and publishing the content to SFCC.\line In SFCC we can see the published content on the page.\line There are two ways of integrating Dynamic Content with SFCC:\b\par
+\highlight1\b0 Mapping slots in Dynamic Content to \b content slots\b0  in SFCC.\line Create SFCC \b content assets\b0  from content items in Dynamic Content.\par
+\b Content slots:-\par
+Content assets:-\b0  \par
+\highlight0\b how many ways to publish the content from Amplience to SFCC?\b0\par
+\b How content is moving from Amplience to SFCC explain in detail?\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 When an edition is scheduled in the Dynamic Content app, a webhook_event is generated.\par
+{\pntext\f1\'B7\tab}The webhook service will notify the integration and send it a "payload" containing information about the edition.\par
+{\pntext\f1\'B7\tab}The integration will use this edition data to create a campaign in SFCC.\par
+{\pntext\f1\'B7\tab}The campaign description will be set to the edition name, the campaign schedule will match the edition schedule and the campaign ID will be set to the edition ID.\par
+{\pntext\f1\'B7\tab}Once the campaign is created, the integration will request the HTML for each slot in the edition.\par
+{\pntext\f1\'B7\tab}It makes use of the \b content rendering\b0  Service to convert slot content into HTML format.\par
+{\pntext\f1\'B7\tab}The content rendering service retrieves the slot in JSON format and converts it into HTML using a handlebars template.\par
+{\pntext\f1\'B7\tab}For each slot in the edition, the integration will create a slot configuration for the corresponding slot in SFCC.\par
+{\pntext\f1\'B7\tab}The HTML contents of the slot will be stored in the slot configuration.\par
+{\pntext\f1\'B7\tab}The slot configuration is then assigned to the SFCC campaign.\par
+{\pntext\f1\'B7\tab}The content is now available to be previewed in the SFCC storefront and to be scheduled to go live.\par
+{\pntext\f1\'B7\tab}If you choose to unschedule the edition in Dynamic Content, then the campaign and slot configurations will be deleted.\par
+
+\pard\sa200\sl276\slmult1\b What is Webhook?\par
+\b0 A webhook is a way for Dynamic Content to automatically send messages or data to a third party system\b\par
+What is visualization explain in detail?\par
+\b0 Used to preview your content at any time during the content production process.\line User must click save to see any content changes within the  visualization.\line visualization display can be toggled on and off by clicking the eye icon at the top of the screen.\line You can use the device size menu to see how the content displays on different device screen sizes.\par
+\b What are extensions in Amplience and how we can use?\par
+\b0 Extensions are simple web apps that extend the functionality of Dynamic Content. There are three types of extensions:\par
+\b content field extensions:- \b0 This extensions are used to extend the features of the content editing form.\b\par
+content editor extensions:- \b0 This extensions augment the content editing experience and are displayed in a tab on the content form.\b\par
+dashboard extensions:- \b0 This extensions are full screen extensions displayed in a tab on the dashboard.\b\par
+How to configure preview in Amplience?\par
+\b0 To view content previews you must have a content preview app set up and specified in the "preview settings" dialog.\b\par
+Difference between AEM with Amplience?\par
+\b0\par
+\par
+Dynamic content:- changing the content\par
+content hub :- htmlfiles, images,other docs \par
+\par
+Dashboard:-\par
+\par
+sheduling:-\par
+\par
+Development:-\par
+\par
+\par
+\b Overview of Amplience.\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 How Amplience will work.\par
+{\pntext\f1\'B7\tab}Amplience modules\par
+{\pntext\f1\'B7\tab}How to customize the SDK\rquote s (Example: Product Selector Extension)\par
+{\pntext\f1\'B7\tab}Hub and repositories. \par
+
+\pard\sa200\sl276\slmult1 Content schema\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Creation of content schema\par
+{\pntext\f1\'B7\tab}Use of content schema\par
+{\pntext\f1\'B7\tab}Linked schema creation.\par
+
+\pard\sa200\sl276\slmult1 Content Types\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Registering the content Types\par
+{\pntext\f1\'B7\tab}Adding icons type Icon and Card\par
+{\pntext\f1\'B7\tab}Preparing the visualization URL and Mapping.\par
+
+\pard\sa200\sl276\slmult1 Extensions\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Use of extensions \par
+{\pntext\f1\'B7\tab}Different types of extension\par
+{\pntext\f1\'B7\tab}Configuring the extensions.\par
+
+\pard\sa200\sl276\slmult1 Integration\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 SFCC integration \par
+{\pntext\f1\'B7\tab}Use of integrations \par
+{\pntext\f1\'B7\tab}How Amplience will work with SFCC integration.\par
+
+\pard\sa200\sl276\slmult1 Webhooks\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 How webhooks will work and use of webhook.\par
+{\pntext\f1\'B7\tab}Activity log checking.\par
+
+\pard\sa200\sl276\slmult1 Content assets, Event and Editions\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Crating the content assets\par
+{\pntext\f1\'B7\tab}Creating and scheduling the content assets\par
+{\pntext\f1\'B7\tab}Event and edition creation.\par
+{\pntext\f1\'B7\tab}Preview the content. \par
+
+\pard\sa200\sl276\slmult1 Localization.\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 How to create localized content schema.\par
+{\pntext\f1\'B7\tab}How to add content to localized content asset.\par
+
+\pard\sa200\sl276\slmult1 Slots, Partial.\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 How to create slots and partial\par
+{\pntext\f1\'B7\tab}Use of slots and partial\par
+{\pntext\f1\'B7\tab}How to link content schema and partial in slot.\par
+
+\pard\sa200\sl276\slmult1 Content-Hub.\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Templates\par
+{\pntext\f1\'B7\tab}Handlebar JS \par
+{\pntext\f1\'B7\tab}Assets\par
+{\pntext\f1\'B7\tab}Publish and access the asset with dynamic URL and CDN URL.\fs22\par
+
+\pard\sa200\sl276\slmult1\b0\par
+\fs28\par
+}
+ 
