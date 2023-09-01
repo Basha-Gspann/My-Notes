@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <style>
+      img {
+        height: 200px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        id="image"
+        src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+      />
+    </div>
+    <button id="button1">Button 1</button>
+    <button id="button2">Button 2</button>
+    <button id="button3">Button 3</button>
+    <button id="button4">Button 4</button>
+
+    <script>
+      $("#button1").click(function () {
+        $("#image").fadeOut(function () {
+          $(this)
+            .attr(
+              "src",
+              "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            )
+            .fadeIn();
+        });
+      });
+
+      $("#button2").click(function () {
+        $("#image").fadeOut(function () {
+          $(this)
+            .attr(
+              "src",
+              "https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg"
+            )
+            .fadeIn();
+        });
+      });
+
+      $("#button3").click(function () {
+        $("#image").fadeOut(function () {
+          $(this)
+            .attr(
+              "src",
+              "https://cdn.pixabay.com/photo/2014/12/16/22/25/sunset-570881_960_720.jpg"
+            )
+            .fadeIn();
+        });
+      });
+
+      $("#button4").click(function () {
+        $("#image").fadeOut(function () {
+          $(this)
+            .attr(
+              "src",
+              "https://cdn.pixabay.com/photo/2013/02/21/19/06/drink-84533_960_720.jpg"
+            )
+            .fadeIn();
+        });
+      });
+    </script>
+
+    <!-- <script>
+      $("#button1").click(function () {
+        $("#image").attr(
+          "src",
+          "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+        );
+      });
+
+      $("#button2").click(function () {
+        $("#image").attr(
+          "src",
+          "https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg"
+        );
+      });
+
+      $("#button3").click(function () {
+        $("#image").attr(
+          "src",
+          "https://cdn.pixabay.com/photo/2014/12/16/22/25/sunset-570881_960_720.jpg"
+        );
+      });
+
+      $("#button4").click(function () {
+        $("#image").attr(
+          "src",
+          "https://cdn.pixabay.com/photo/2013/02/21/19/06/drink-84533_960_720.jpg"
+        );
+      });
+    </script> -->
+  </body>
+</html>

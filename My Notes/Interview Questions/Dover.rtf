@@ -1,0 +1,164 @@
+{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs32\lang9 Explain AEM Project you have worked on.\par
+How you started the Design Wireframe?\par
+How did you start Coding?\par
+Folder Structure?\par
+What is the version you have used in AEM?\par
+Where will you write CSS and JS in AEM?\par
+Use of DAM?\par
+Clientlibs?\par
+Have you created any Components in AEM?\par
+What is Template in AEM?\par
+\par
+\par
+Have you used SCSS / LESS?\par
+What have you used in SCSS?\par
+What is mixin'?\par
+Why is SCSS  better than CSS?\par
+\par
+What is the use of Bootstrap?\par
+Explain the Grid system.\par
+Tell me a few classes you have used in Bootstrap.\par
+What is MD & xs?\par
+\par
+\par
+Have you worked on jQuery?\par
+Explain Accordion in jQuery (Functionality).\par
+How to use Delay in jQuery?\par
+\par
+How will you manage the code?\par
+What is the major challenge you have faced in UI?\par
+Cross-browser Compatibility?\par
+Did you work on AEM Cloud?\par
+\par
+\par
+\par
+\par
+\par
+\par
+Four divs in the four corners of a parent div\par
+\fs20 <div id="container">\par
+  <div class="top left"></div>\par
+  <div class="top right"></div>\par
+  <div class="bottom left"></div>\par
+  <div class="bottom right"></div>\par
+</div>\par
+#container \{\par
+  position: relative;\par
+width: 150px;\par
+  height: 150px;\par
+  background: green;\par
+\}\par
+#container div \{\par
+  position: absolute;\par
+  width: 20px;\par
+  height: 20px;\par
+  background: red;\par
+\}\par
+.top \{\par
+  top: 0;\par
+\}\par
+.right \{\par
+  right: 0;\par
+\}\par
+.bottom \{\par
+  bottom: 0;\par
+\}\par
+.left \{\par
+  left: 0;\par
+\}\par
+\fs32 Div in center\par
+\fs20 <head>\par
+<style>\par
+.center \{\par
+  margin: auto;\par
+  width: 50%;\par
+  border: 3px solid #73AD21;\par
+  padding: 10px;\par
+\}\par
+</style>\par
+</head>\par
+<body>\par
+<div class="center">\par
+  <p>Hello World!</p>\par
+</div>\par
+</body>\par
+\fs32 Image in center\fs20\par
+<head>\par
+<style>\par
+img \{\par
+  display: block;\par
+  margin-left: auto;\par
+  margin-right: auto;\par
+\}\par
+</style>\par
+</head>\par
+<body>\par
+<img src="paris.jpg" alt="Paris" style="width:40%">\par
+\par
+</body>\par
+\par
+\fs24 1. What is Java Script ?\par
+A. Java Script is a scripting language used both on the Clint-side and server-      \par
+     side.(Frontend & Backend)\par
+2. Difference between Var / Let / Const ?\par
+A. Var:- for this their is no restructions we can use any where this is called \par
+                Globel level Declaration.(it will overwrite the value).\par
+     Let:- It have Certain restructions,If your declaring a variable in side a     \par
+               function it will useful only in side the function. we can't use out of \par
+               function.\par
+
+\pard\sa200\sl276\slmult1\tx142\tx284\tx426      Const:- If we decalare a variable by using Const keyword , we can't     \par
+                    reasign the variable.\par
+3. What is Arrow Functions ?\par
+A. Before:- hello = function() \{\par
+                      return "Hello World!";\}\par
+     After:- hello = () => \{\par
+                   return "Hello World!";\}\par
+4. What is Async ??\par
+A. It is called Non-Blocking, it will execute one line after one line.\par
+5. What is Await ??\par
+
+\pard\sa200\sl276\slmult1\tx142\tx284\tx426\tx1136 A. The await keyword can only be used inside an async function.The await   \par
+     keyword makes the function pause the execution and wait for a resolved    \par
+     promise before it continue.\par
+\par
+1) What is Adobe AEM? / What do you understand by AEM?\par
+Adobe AEM, also known as AEM, stands for Adobe Experience Manager. It is a comprehensive content management solution used for building websites, mobile apps, and forms. It is used to make your marketing content and assets easily manageable. AEM is based on the concepts of Apache Sling, a Java application based on OSGi using the Apache Felix engine. It is also a part of the Adobe Marketing Cloud.\par
+2) What are the main features of AEM?\par
+AEM provides an easy way to navigate through the different pages, assets, templates and elements in the web page.\par
+AEM new template editor consists of many features which allow the users to create and manage their personalized templates. You can easily drag and drop, make the forms with the help of HTML5 functionality. It makes the whole process easier.\par
+The AEM latest features are associated with Livefyre and provide better content development and social media marketing.\par
+In AEM, the multi-site manager provides a seamless launching of online campaigns for international brands. It can very easily target the local markets and customers.\par
+AEM provides a unified User Interface that allows better personalization for all.\par
+3) What is Sightly in AEM?\par
+Sightly is an HTML templating language that was introduced in AEM 6.0. It was mainly introduced to take the place of JSP files and as an approved templating system for HTML.\par
+Sightly works as a new HTML templating engine and replaces the JSP and ESP as the predominant templating engine for AEM 6. Adobe has launched Sightly to produce more readable, maintainable, and secure code while distinctly separating the logic and markup.\par
+4) What is the difference between Design Dialog and Edit Dialog?\par
+Both Design Dialog and Edit Dialog are used to define the UI interface and allow the user to configure the component. \par
+The design dialog is at template level, so all the template pages will share the same design dialog and be stored under the/etc/designs folder.\par
+The edit dialog of a component is at page level so that each component instance will have its own dialog and information entered in the dialog. It is stored under /content folder.\par
+5) What is a component? What do you understand by extending a component?\par
+A component is a reusable module used to implement certain logic to render the website content. When you want to create a new component that will not override a base component but will have the same features as the original component to build upon that, then this process is called extending a component. To extend a component, you must set the "sling: resourceSuperType" of the component to the base component you would like to continue.\par
+6) What is the difference between package and bundle?\par
+Package: A Package is a zip file that contains the content in the form of a file-system serialization (also called "vault" serialization). It displays the content from the repository and is an easy-to-use-and-edit representation of files and folders. A package generally contains content and project-related data.\par
+Bundle: A bundle is a tightly coupled, dynamically loadable collection of classes, jars, and configuration files that explicitly declare their external dependencies if they have any.\par
+7) What are the all available interfaces in Adobe Experience Manager (AEM)?\par
+CRX Delite,Site Admin,Apache Felix,Etc/Tool,CRX Explorer\par
+
+\pard\sa200\sl276\slmult1 8) What is the use of the Edit Config node in creating a component?\par
+The Edit Config node is used to define the behaviour of the component while creating a component.\par
+9) How can you load digital assets in a DAM?\par
+There are two ways to add digital assets in a DAM:\par
+\b Using the graphical user interface\b0 : To use the graphical user interface, you must first browse for the selected files you want to add. Then, CQ will automatically create the metadata for those assets in the DAM folder.\par
+\b Through the WebDav access\b0 : The WebDav option is generally used when we want to upload many assets at once.\par
+10) What are the new features added in AEM 6.5?\par
+AEM 6.5 is the latest release of Adobe Experience Manager. This new release has some great features included, such as it is more customer-focused. It enables developers, marketers and IT experts to work together on the quick conveyance of customized brand experience.\par
+11) What do you understand by custom tag libraries in AEM?\par
+The custom tag libraries are developed using AEM to call or invoke its actions from an AEM component. These actions can be invoked using XML code.\par
+12) What is an overlay in AEM?\par
+In AEM, an overlay is a process of redefining the existing functionality and a way to customize it. We can make it a custom component by modifying the current foundation component according to requirements.\par
+\par
+}
+ 

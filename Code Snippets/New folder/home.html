@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+          #image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #image img {
+        width: 200px;
+        height: 200px;
+      }
+
+      #btn1:active ~ #image img {
+        content: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg);
+      }
+
+      #btn2:active ~ #image img {
+        content: url(https://cdn.pixabay.com/photo/2013/07/18/20/26/sea-164989_960_720.jpg);
+      }
+
+      #btn3:active ~ #image img {
+        content: url(https://cdn.pixabay.com/photo/2014/12/16/22/25/sunset-570881_960_720.jpg);
+      }
+
+      #btn4:active ~ #image img {
+        content: url(https://cdn.pixabay.com/photo/2013/02/21/19/06/drink-84533_960_720.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+    <button id="btn4">Button 4</button>
+
+    <div id="image">
+      <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" alt="Image" />
+    </div>
+  </body>
+</html>
